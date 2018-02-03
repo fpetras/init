@@ -1,1 +1,1 @@
-nslookup slash16.org | grep Address | head -1 | cut -b 10-
+nslookup slash16.org
