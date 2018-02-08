@@ -1,1 +1,2 @@
-last reboot
+uptime -s
+uptime -p

@@ -1,2 +1,2 @@
-iptables -P INPUT DROP
-iptables -P OUTPUT DROP
+sudo iptables -A INPUT -j REJECT
+sudo iptables -A OUTPUT -j REJECT
