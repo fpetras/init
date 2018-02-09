@@ -1,1 +1,3 @@
+# Device name for Wi-Fi seems to be en1 on Macs with a single Ethernet port
+
 ifconfig en1 | grep ether | cut -d " " -f 2

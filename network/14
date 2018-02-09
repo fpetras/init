@@ -1,3 +1,5 @@
+# allows us to determine the domain name associated with the IP address
+
 host 10.51.1.81
->>
-81.1.51.10.in-addr.arpa domain name pointer ldap-proxy.42.fr.
+# >>
+# 81.1.51.10.in-addr.arpa domain name pointer ldap-proxy.42.fr.

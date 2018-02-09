@@ -1,1 +1,3 @@
 sudo tail -f /var/log/syslog &
+
+# the ID of the running program can now be checked with "pidof tail"

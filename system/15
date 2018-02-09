@@ -1,1 +1,3 @@
 sudo pkill tail
+
+# alternate solution: sudo kill $(pidof tail)

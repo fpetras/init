@@ -1,3 +1,14 @@
-echo "* 4 * * 1 sudo apt-get update && sudo apt-get dist-upgrade >> /var/log/update_script.log" > script
-crontab script
-rm script
+# if permissions for /var/log/update_script.log can't be resolved, just test
+# with some file in another location
+
+sudo apt-get update && sudo apt-get dist-upgrade >> /var/log/update_script.log
+
+# script to create crontab schedule:
+#
+# this file has to be at ~ and called 02
+#
+# echo "0 4 * * 0 sh ~/02" > script
+# crontab script
+# rm script
+#
+# this will create a cronjob that'll run every Sunday at 4 AM

@@ -1,0 +1,25 @@
+# mail command had to be installed by running sudo apt-get install mailutils
+# sent mail can be found in /var/mail/vagrant
+
+if [ ! -f ~/diff1.txt ]
+then
+	md5sum /etc/crontab > ~/diff1.txt
+fi
+DIFF1=`cat ~/diff1.txt`
+DIFF2=`md5sum /etc/crontab`
+if [ "${DIFF1}" != "${DIFF2}" ]
+then
+ 	echo "/etc/crontab has been modified" | mail -s "crontab notification" root
+ 	echo "${DIFF2}" > ~/diff1.txt
+fi
+
+# script to create crontab schedule:
+#
+# this file has to be at ~ and called 04
+#
+# echo "0 0 * * * sh ~/04" > task
+# crontab task
+# rm task
+
+# current crontab task can be checked with crontab -l, removed with -r
+

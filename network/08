@@ -1,1 +1,3 @@
+# displays all info about the provider
+
 whois slash16.org | grep "Registrar [WUA]"
